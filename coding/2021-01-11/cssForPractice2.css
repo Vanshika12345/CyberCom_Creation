@@ -1,0 +1,75 @@
+.mainHead{
+	text-align: center;
+	margin-top: 100px;
+}
+.mainDesc{
+	text-align: center;
+	color: grey;
+}
+.mainDiv{
+	margin-left: 290px;	
+}
+
+.column{
+	margin: auto;
+	margin-top: 20px;
+	margin-left: 20px;
+	float: left;
+	width: 20%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	padding: 1px;
+
+}
+
+.block{
+align-items: center;
+display: flex;
+text-align: center;
+background-color: white;
+height: 90px;
+width : 199px;
+margin: auto;
+
+}
+
+.personImg{
+	border-radius: 50%;
+	margin: auto;
+	margin-left: auto; 
+	height: 70px;
+	width: 70px;
+	margin-top: 10px;
+	display: block;
+	color: white;
+
+}
+.text{
+	margin-top: 12px;
+	margin: auto;
+	text-align: center;
+	margin-right: auto;
+}
+
+.description{
+
+height: 15px;
+width: 160px;
+margin: auto;
+display: block;
+text-align: center;
+font-style: normal;
+color: black;
+background-color: white;
+}
+
+.positionDesc{
+
+width: 199px;
+margin: auto;
+display: block;
+text-align: center;
+font-style: normal;
+color: grey;
+background-color: white;
+padding: 1px;
+}

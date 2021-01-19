@@ -1,0 +1,20 @@
+label{
+	float: left;
+	width: 200px;
+}
+.cb{
+	margin-top: 5px;
+	width: 80px;
+	height: 8px;
+}
+input{
+	height: 25px;	
+}
+.boxtext{
+width: 200px;
+}
+.areatext{
+	resize: none;
+	height: 70px;
+	width: 130px;
+}

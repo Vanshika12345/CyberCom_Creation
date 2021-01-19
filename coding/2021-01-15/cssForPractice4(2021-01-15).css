@@ -1,0 +1,11 @@
+.text{
+	border-collapse: collapse;
+	height: 400px;
+	width: 400px;
+	border: 2px solid;
+}
+
+.image{
+	height: 50px;
+	width: 50px;
+}

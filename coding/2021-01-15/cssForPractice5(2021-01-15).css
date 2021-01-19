@@ -1,0 +1,27 @@
+.text{
+	border-collapse: collapse;
+	height: 400px;
+	width: 400px;
+	border: 3px solid;
+}
+th,td{
+	padding: 5px;
+}
+.bgGreen{
+	background-color: #e6ffe8;
+}
+.bgBlue{
+	background-color: #cceaff;
+	font-weight: bold;
+	}
+.bgPink{
+	background-color: #ffe6f4;
+}
+.bgYellow{
+	background-color: #ffffb3;
+}
+.displayBorder{
+	border: hidden;
+	border-right: 3px solid;
+
+}

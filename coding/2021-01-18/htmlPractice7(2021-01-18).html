@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="cssForPractice7(2021-01-18).css">
+</head>
+<body>
+<script type="text/javascript" src="jsForPractice7(2021-01-18).js"></script>
+	<form method="post">
+		<fieldset>
+			<table>
+			<legend>Your address</legend>
+			<tr>
+				<td><label>First Name </label></td>
+				<td><input type="text" name="firstName" class="boxtext" id="userFirstName"></td>
+			</tr>
+			<tr>
+				<td><label>Last Name </label></td>
+				<td><input type="text" name="lastName" class="boxtext" id="userLastName"></td>
+			</tr>
+			<tr>
+				<td><label>Street </label></td>
+				<td><input type = "text" name = "street" class="boxtext" id = "userStreet"></td>
+			</tr>
+			<tr>
+				<td><label>City </label></td>
+				<td><input type = "text" name = "city" class="boxtext" id = "userCity"></td>
+			</tr>
+			</table>
+		</fieldset>	
+		<fieldset>
+			<table>
+			<legend>Additional Details</legend>
+			<tr>
+				<td><label>Biography </label></td>
+				<td><textarea name="bio" id="userBio"  rows="5" cols="26"></textarea></td></tr>
+			<tr>
+				<td><label>Image </label></td>
+				<td><input type = "file" name = "ImageFile" id="uploadImage" accept="image/*"></td></tr>
+			<tr>
+				<td><label>Age Group </label></td>
+				<td>
+					<select name = "age" id="userAge">
+						<option selected>0 to 9 years</option>
+						<option>9 to 12 years</option>
+						<option>13 to 20 years</option>
+					</select>
+				</td>
+			</tr>
+			</table>
+		</fieldset>	
+		<fieldset>
+			<table>
+			<legend>Interests</legend>
+			<tr>
+				<td><label>Hobbies </label></td>
+				<td><input type="checkbox" name='hobbies' id="userHobbies" value="soccer"><label class="cb" for="hobbies">Playing soccer</label></td>  
+				<td> <input type="checkbox" name='hobbies' id="userHobbies" value="dancing"><label  class="cb" for="hobbies">Dancing</label></td>   
+				<td><input type="checkbox" name='hobbies' id="userHobbies" value="gardening"><label class="cb" for="hobbies">Gardening</label></td>
+				<td><input type="checkbox" name='hobbies' id="userHobbies" value="movies"><label class="cb" for="hobbies">Watching movies</label></td></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr>
+				<td><label>Favourite car? </label></td>
+				<td>
+					<select name="favcar" id="userFavCar">
+						<option selected>Volvo</option>
+						<option>Hyundai</option>
+						<option>Maruti Suzuki</option>
+						<option>Tata</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Favourite public Transport? </label></td>
+				<td><input type="checkbox" name='favTransport' id="userFavTransport" value="Bus">
+					<label class="cb" for="hobbies">Bus</label>
+				</td>
+				<td><input type="checkbox" name='favTransport' id="userFavTransport" value="Train">
+					<label class="cb" for="hobbies">Train</label></td>
+				<td><input type="checkbox" name='favTransport' id="userFavTransport" value="Ship">
+					<label class="cb" for="hobbies">Ship</label></td>	
+			</tr>
+			</table>
+		</fieldset>	<br>
+		<tr>
+			<td>
+				<input type="submit" name="btnSubmit" id="btnSubmit" onclick="validate()">
+			</td>
+			<td>
+				<input type="reset" name="btnReset" id="btnReset">
+			</td>
+		</tr>
+	</form>
+</body>
+</html>
