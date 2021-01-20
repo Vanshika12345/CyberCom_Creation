@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<h3>Objects task</h3>
-
-<p id="table"></p>
-<p id="form"></p>
-<form>
-	Name: <input type="text" name="userName" id="userName"><br>
-	Email: <input type="text" name="email" id="userEmail"><br>
-	Date of Birth:<input type="text" name="dob" id="userDob"><br>
-	<input type="submit" name="submit" id="btnSubmit" onclick="setData()">
-</form>
-
-<script type="text/javascript">
 //1 printing properties of object
 	var obj = {
 		name: 'Vanshika',
@@ -50,6 +32,7 @@ var anjali = {
  var arr = JSON.parse(localStorage.getItem('arrayOfObjects')); 
  console.table(arr); //or
  var table = "<table border = '2px'>";
+ table += "<caption>Array Of Objects</caption>";
  table += "<tr>";
  table += "<th> Name </th>";
  table += "<th> Age </th>";
@@ -82,24 +65,22 @@ document.getElementById('table').innerHTML = table;
 	console.log(objArray.sort(compareName)); //returns an array sorted by name property 
 
 //4Storing the value from form into an array as an object 
-/*function setData(){
+function setData(){
 var submit = document.getElementById('btnSubmit');
 	if(submit){
 	var usrname = document.getElementById('userName').value;
 	var uremail = document.getElementById('userEmail').value;
 	var usrdateOfBirth = document.getElementById('userDob').value;
-	//document.getElementById('form').textContent = usrname;
-		
+	
 	var add = {
 			name : usrname,
 			emailId : uremail,
 			bod : usrdateOfBirth
 		};
-		document.getElementById('form').textContent = add.name;
-		//console.log(add);
-	}
-	
-}*/
-</script>
-</body>
-</html>
+		
+		localStorage.setItem('usrName',add['name']);
+		localStorage.setItem('usrEmail',add['emailId']);
+		localStorage.setItem('usrDob',add['bod']);
+		}
+	window.open('view.html');
+}
