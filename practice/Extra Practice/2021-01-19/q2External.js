@@ -1,13 +1,3 @@
-//1 printing properties of object
-	var obj = {
-		name: 'Vanshika',
-		age: 22		
-	};
-
-	for(x in obj){
-		console.log(x);
-	}
-
 //2 storing and fething an array of objects using local storage
 
 var vanshika = {
@@ -30,7 +20,8 @@ var anjali = {
  }
  
  var arr = JSON.parse(localStorage.getItem('arrayOfObjects')); 
- console.table(arr); //or
+ console.table(arr); 
+ //or
  var table = "<table border = '2px'>";
  table += "<caption>Array Of Objects</caption>";
  table += "<tr>";
@@ -49,38 +40,3 @@ var anjali = {
  }
 table += "</table>";
 document.getElementById('table').innerHTML = table;
-
-//3 Sorting an array of objects
-	function compareName(a,b){
-		if(a.name > b.name){
-		return 1;
-		}
-		else if(a.name < b.name){
-		return -1;
-		}
-		else{
-		return 0;
-		}
-	}
-	console.log(objArray.sort(compareName)); //returns an array sorted by name property 
-
-//4Storing the value from form into an array as an object 
-function setData(){
-var submit = document.getElementById('btnSubmit');
-	if(submit){
-	var usrname = document.getElementById('userName').value;
-	var uremail = document.getElementById('userEmail').value;
-	var usrdateOfBirth = document.getElementById('userDob').value;
-	
-	var add = {
-			name : usrname,
-			emailId : uremail,
-			bod : usrdateOfBirth
-		};
-		
-		localStorage.setItem('usrName',add['name']);
-		localStorage.setItem('usrEmail',add['emailId']);
-		localStorage.setItem('usrDob',add['bod']);
-		}
-	window.open('view.html');
-}
