@@ -6,6 +6,7 @@ function registerNow(){
 	var adconfirmPassword = document.getElementById('adminRegisterConfirmPassword').value;
 	var adcity = document.getElementById('adminCity').value;
 	var adstate = document.getElementById('adminState').value;
+	var adBod = document.getElementById('adminDob').value;
 	var checkBoxTicked = document.getElementById('termsAndConditions');
 	var register = document.getElementById('btnRegister');
 		if(register){
@@ -20,12 +21,20 @@ function registerNow(){
 				var adminDetails = {
 					name : adname,
 					email : ademail,
+					bod : adBod,
 					password : adpassword,
 					city : adcity,
 					state : adstate
 				};
+				var adminLogin = {
+					name : adname,
+					email : ademail,
+					bod : adBod,
+					password : adpassword
+				};
 				
 				localStorage.setItem('adminRegistrationDetails',JSON.stringify(adminDetails));
+				localStorage.setItem('userLoginDetails',JSON.stringify(adminLogin));
 				window.open("login.html");
 
 			}
