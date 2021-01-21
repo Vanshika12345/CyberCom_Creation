@@ -1,0 +1,36 @@
+.sideBar{
+	width: 145px;
+	height: 700px;
+	float: left;
+	background-color: #ffe6f4;
+}
+.Info{
+	width: 200px;
+	height: 700px;
+}
+.menu{
+	margin-top: 10px;
+}
+input{
+	width: 125px;
+	height: 20px;
+}
+label{
+	margin-left: 10px;
+	font-size: 15px;
+}
+button{
+	font-size: 15px;
+	border: 0px;
+	margin-left: 15px;
+	margin-top: 10px;
+	background-color: #ffe6f4;
+}
+.block{
+	margin-left: 150px;
+	padding-right: 50px;
+	margin-top: 10px;
+	border: 1px solid;
+	width: 700px;
+	height: 700px;
+}

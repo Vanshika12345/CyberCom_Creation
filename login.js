@@ -8,7 +8,8 @@ function loginNow(){
 	var userDetails = JSON.parse(localStorage.getItem('adminRegistrationDetails'));
 			if(userEmail === userDetails.email ){
 				if(userPassword === userDetails.password){
-				window.open('admin-dashboard.html');	}
+				window.open('admin-dashboard.html');	
+			}
 				else{
 					alert('Enter the correct password');
 				}
@@ -19,7 +20,12 @@ function loginNow(){
 					for(var i=0 ; i<userDetails.length();i++){
 						if(userEmail === userDetails.email){
 							if(userPassword === userDetails.password){
-								window.open('User-dashboard.html');		
+								window.open('User-dashboard.html');	
+									var sessionDetails = {
+										name : userDetails.name,
+										loginTime : new Date()
+									};
+									sessionStorage.setItem('userSessionDetails',JSON.stringify(sessionDetails));
 							}
 							else{
 							alert('Enter the correct password');
