@@ -3,6 +3,10 @@
 	height: 700px;
 	float: left;
 	background-color: #ffe6f4;
+	color: black;
+}
+a{
+color: black;
 }
 .Info{
 	width: 200px;
@@ -14,18 +18,13 @@
 input{
 	width: 125px;
 	height: 20px;
+	color: black;
 }
 label{
 	margin-left: 10px;
 	font-size: 15px;
 }
-button{
-	font-size: 15px;
-	border: 0px;
-	margin-left: 15px;
-	margin-top: 10px;
-	background-color: #ffe6f4;
-}
+
 .block{
 	margin-left: 150px;
 	padding-right: 50px;
