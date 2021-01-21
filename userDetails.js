@@ -3,9 +3,9 @@ function addUsers(){
 	var uname = document.getElementById('userName').value;
 	var uemail = document.getElementById('userEmail').value;
 	var upassword = document.getElementById('userPassword').value;
-	var udob = document.getElementById('userDob').value;
+	var dob = new Date(document.getElementById('userDob').value);
 	var add = document.getElementById('addUser');
-
+	var udob = dob.getDate()+'/'+dob.getMonth()+'/'+dob.getFullYear();
 	if(add){
 		var userdetails = {
 					name : uname,
@@ -41,7 +41,8 @@ else{
  table += "<th> Age </th>";
  table += "</tr>";
 		for(var i = 0; i < details.length; i++){
-			var age =  date - new Date(details[i].dateofbirth).getFullYear();
+			var userDate = (details[i].dateofbirth.substring(details[i].dateofbirth.lastIndexOf('/')+1));
+ 			var age =  date - userDate;
  			table += "</tr>";
  			table += "<tr>";
  			table += "<td>" + details[i].name + "</td>";

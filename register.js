@@ -34,7 +34,6 @@ function registerNow(){
 				};
 				
 				localStorage.setItem('adminRegistrationDetails',JSON.stringify(adminDetails));
-				localStorage.setItem('userLoginDetails',JSON.stringify(adminLogin));
 				window.open("login.html");
 
 			}
