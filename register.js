@@ -10,8 +10,7 @@ function registerNow(){
 	var register = document.getElementById('btnRegister');
 		if(register){
 		if(adpassword === adconfirmPassword){
-			console.log('yes');
-			if(localStorage.getItem('registrationDetails')){
+			if(localStorage.getItem('adminRegistrationDetails')){
 				//document.getElementById('btnRegister').style.display ='none';
 				alert('Admin already registered');
 				window.open ("login.html");
@@ -25,14 +24,13 @@ function registerNow(){
 					city : adcity,
 					state : adstate
 				};
-
-				localStorage.setItem('registrationDetails',JSON.stringify(adminDetails));
+				
+				localStorage.setItem('adminRegistrationDetails',JSON.stringify(adminDetails));
 				window.open("login.html");
 
 			}
 		}
 		else{
-			console.log('No');
 			alert("Both password should be same");
 		}}
 }
