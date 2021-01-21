@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+	<form>
+
+		<div class="block">
+		<h3><center>REGISTER</h3>
+		<div>
+			<input type="text" name="adminRegisterName" id="adminRegisterName" placeholder="Name" class="textBox" required></div>
+		<div>
+			<input type="text" name="adminRegisterEmail" id="adminRegisterEmail" placeholder="Email"class="textBox" required="">
+		</div>
+		<div>
+			<input type="password" name="adminRegisterPassword" id="adminRegisterPassword" placeholder="Password"class="textBox" required=""></div>
+		<div>
+			<input type="password" name="adminRegisterConfirmPassword" id="adminRegisterConfirmPassword" placeholder="Confirm Password" class="textBox" required>
+		</div>
+		<div>
+			<select name="adminCity" id="adminCity" class="select" required>
+				<option value="City">Select City</option>
+				<option value="Ahmedabad">Ahmedabad</option>
+				<option value="Surat">Surat</option>
+				<option value="Baroda">Baroda</option>
+				<option value="Mehsana">Mehsana</option></select>
+		</div>
+		<div>
+			<select name="adminState" id="adminState" class="select" required>
+				<option value="State">Select State</option>
+				<option value="Gujarat">Gujarat</option>
+				<option value="Rajasthan">Rajasthan</option>
+				<option value="Tamil Nadu">Tamil Nadu</option>
+				<option value="Maharashtra">Maharashtra</option></select>
+		</div>
+		<div>
+			<input type="checkbox" name="termsAndConditions" id="termsAndConditions">
+			<label for = "termsAndConditions">Terms & Conditions</label>
+		</div>
+		<div><button name="btnRegister" id="btnRegister" class="input" onclick="registerNow()">REGISTER</button></div>
+	</form>
+	</div>
+	<script type="text/javascript" src="register.js"></script>
+</body>
+</html>
