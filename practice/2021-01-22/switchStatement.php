@@ -4,13 +4,13 @@ $number = 1;
 switch($number){
 	case 1:
 		echo "One";
-			break;
+		break;
 	case 2:
 		echo "Two";
-			break;
+		break;
 	default:
 		echo "Number not present";
-			break;
+		break;
 }
 
 

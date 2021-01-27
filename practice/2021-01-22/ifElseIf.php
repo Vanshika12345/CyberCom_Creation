@@ -4,22 +4,30 @@
 	$c = 3;
 
 	if($a > $b && $a > $c){
+
 		echo "$a is greater<br>";
-	}
-	else if($b > $a && $b > $c ){
+
+	}elseif($b > $a && $b > $c ){
+
 		echo "$b is greater<br>";
-	}
-	else{
+
+	}else{
+
 		echo "$c is greater<br>";
+		
 	}
 
 	if ($a == 3) {
+
 		echo "a is 3<br>";
-	}
-	elseif ($a == 1) {
+
+	}elseif ($a == 1) {
+
 		echo "a is 1<br>";
-	}
-	else{
+
+	}else{
+
 		echo "a is undefined<br>";
+
 	}
 ?>
