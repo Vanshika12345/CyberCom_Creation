@@ -11,31 +11,23 @@ if (mail($sendTo, $subject, $body, $header)){
 	echo 'Error occured';
 }
 /**
+--php.ini-----
 [mail function]
-; For Win32 only.
-; http://php.net/smtp
 SMTP=smtp.gmail.com
-; http://php.net/smtp-port
-smtp_port=25
+smtp_port=587
+sendmail_from = vanshikaagarwal544@gmail.com
 
-; For Win32 only.
-; http://php.net/sendmail-from
-;sendmail_from = me@example.com
+sendmail_path ="\"C:\xampp\sendmail\sendmail.exe\" -t"
 
-; For Unix only.  You may supply arguments as well (default: "sendmail -t -i").
-; http://php.net/sendmail-path
-sendmail_path ="\"C:\xampp\sendmail\sendmail.exe\" -t
-
-sendmail.ini
+----sendmail.ini----
 
 smtp_server=smtp.gmail.com
 
-; smtp port (normally 25)
-
-smtp_port=25
-
+smtp_port=587
+error_logfile = error.log
+debug_logfile = debug.log
 auth_username= vanshikaagarwal544@gmail.com
-auth_password= yourpassword
+auth_password= your-gmail-password
 
 force_sender= vanshikaagarwal544@gmail.com
 hostname= localhost
