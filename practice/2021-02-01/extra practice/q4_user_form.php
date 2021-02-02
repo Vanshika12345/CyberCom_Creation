@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>User form 4</title>
-	<link rel="stylesheet" type="text/css" href="q4_user_form(using div).css">
+	<link rel="stylesheet" type="text/css" href="q4_user_form.css">
 </head>
 <body>
 	<form action = "<?php echo $_SERVER['PHP_SELF'] ;?>" method="post">
