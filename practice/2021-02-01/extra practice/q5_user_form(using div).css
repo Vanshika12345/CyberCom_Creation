@@ -1,0 +1,39 @@
+.form{
+	padding: 10px;
+	height: 150px;
+	width: 250px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: #ffffff;
+	
+}
+.error{
+	color: #FF0000;
+}
+
+.txt{
+	width: 220px;
+	border-color: #ffffff;
+	height: 20px;
+	background-color: #e0e0eb;
+}
+.header{
+	background-color: #ff005e; 
+	color: #ffffff;
+	padding: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	width: 250px;
+}
+body{
+	background-color: #ffe6ef;
+}
+.btn-submit{
+	margin-top: 5px;
+	margin-left: 100px;
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #00FF7F;
+	color: #ffffff;
+}

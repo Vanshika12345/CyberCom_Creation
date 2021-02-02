@@ -23,7 +23,7 @@ if (name !== '') {
 					if (age !== '') {
 						if (fileupload !== "") {
 							flag = true;
-							console.log("Details submitted");
+							//console.log("Details submitted");
 						} else {
 							fileErr = 'Choose a file';
 							document.getElementById('fileErr').textContent = fileErr;
