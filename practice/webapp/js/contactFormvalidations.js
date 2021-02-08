@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	$('#ucreatedat').datetimepicker();
+	$('#upd_ucreatedat').datetimepicker();
 	readRecords(); 
 	
 });
@@ -49,7 +51,7 @@ function addRecords() {
                     $('#upd_uname').val(user.name);
                     $('#upd_uemail').val(user.email);
                     $('#upd_uphone').val(user.phone);
-                    $('#upd_utitle').val(user.title);
+                    $('#upd_utitle').val(user.title); 
                     $('#upd_ucreatedat').val(user.createdAt);
                 }); 
                 $('#updateModal').modal('show');

@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 $conn = mysqli_connect('localhost','root','','contact_db');
 if (!$conn) {
 		echo 'Could not connect';
@@ -24,6 +24,7 @@ if (isset($_POST['records'])) {
 				$query = 'select * from contact_details';
 				$result = mysqli_query($conn,$query);
 				if (mysqli_num_rows($result)>0) {
+					$_SESSION['count'] = ''.mysqli_num_rows($result).' Records Found.';
 					while ($qr = mysqli_fetch_assoc($result)) {
 						$id = $qr['id'];
 						$data.= "<tr>
@@ -62,6 +63,8 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phone']) &&
 
       			$query = "insert into `contact_details`(name, email, phone, title, createdAt) values('".$name."','".$email."','".$phone."','".$title."','".$createdat."')";
     			mysqli_query($conn, $query);
+    			$_SESSION['Status'] = 'Data inserted Successfully';
+						
     				
 
       		}
@@ -77,6 +80,7 @@ if(isset($_POST['deleteid'])){
 	$query2 = "delete from `contact_details` where id='$userid'";
 
 	mysqli_query($conn, $query2);
+	$_SESSION['Status'] = 'Data removed Successfully';
 	
 }
 
@@ -120,6 +124,7 @@ if (isset($_POST['hidden_user_id'])) {
 
 		$query = "update contact_details set name = '$name', email = '$email', phone = '$phone', title='$title',createdAt = '$created' where id = '$hidden_user_id' ";
 		mysqli_query($conn,$query);
+		$_SESSION['Status']='Data Updated Successfully';
 
 	}	
 mysqli_close($conn);

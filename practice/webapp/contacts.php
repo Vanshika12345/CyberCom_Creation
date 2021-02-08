@@ -17,6 +17,7 @@
                 <hr>
                 <button type = "button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Create Contact</button><br>
                  <br>
+                 <label><?php if (isset($_SESSION['count'])) {echo $_SESSION['count'];}?></label>
                 <div id="dataTable"></div>
                 <!--The Modal-->
                 <div class="modal fade" id="myModal">
@@ -51,7 +52,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Created At</label>
-                                    <input type="datetime-local" name="ucreatedat" id="ucreatedat" class="form-control" >
+                                    <input type="text" name="ucreatedat" id="ucreatedat" class="form-control" >
                                     <div id='createdErr'class="text-danger"></div>
                                 </div>
                         </div>
@@ -106,7 +107,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Created</label>
-                                    <input type="datetime-local" name="upd_ucreatedat" id="upd_ucreatedat" class="form-control" >
+                                    <input type="text" name="upd_ucreatedat" id="upd_ucreatedat" class="form-control" >
                                     <div id='nameErr'class="text-danger"></div>
                                 </div>
                         </div>
