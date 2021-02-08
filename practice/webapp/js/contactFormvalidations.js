@@ -29,7 +29,7 @@ function addRecords() {
 		url:'lib/connection.php',
 		type: 'post',
 		data: {name:name,email:email,phone:phone,title:title,createAt:createAt},
-		sucess: function(data){
+		success: function(data){
 			readRecords();
 		}
 	});
@@ -86,7 +86,7 @@ function deleteUser(deleteid) {
 			url: 'lib/connection.php',
 			type: 'post',
 			data: {deleteid:deleteid},
-			sucess: function(data,status) {
+			success: function(data,status) {
 				readRecords();
 			}
 
