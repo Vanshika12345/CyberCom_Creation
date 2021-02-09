@@ -5,7 +5,7 @@ $(document).ready(function() {
 	
 });
 
-
+//fetching the records
 function readRecords() {
 	var records = 'records';
 	$.ajax({
@@ -26,7 +26,6 @@ function addRecords() {
 	var phone = $('#uphone').val();
 	var title = $('#utitle').val();
 	var createAt = $('#ucreatedat').val(); 
-
 	$.ajax({
 		url:'lib/connection.php',
 		type: 'post',
@@ -39,7 +38,7 @@ function addRecords() {
 }
 
 
-//edit function call
+//fetching data of specific contact_id
             function getUserDetails(id){
                 
                 $('#hidden_user_id').val(id);
@@ -56,7 +55,7 @@ function addRecords() {
                 }); 
                 $('#updateModal').modal('show');
             }
- //           function to update user values
+ //Updating to database
             function updateUserDetails(){
                 var hidden_user_id = $('#hidden_user_id').val();
                 var nameupd = $('#upd_uname').val();
@@ -79,7 +78,7 @@ function addRecords() {
                 });}
 
 
-
+//deleting User
 function deleteUser(deleteid) {
 	console.log('Delete');
 	var conf = confirm('Are you sure?');
@@ -96,14 +95,11 @@ function deleteUser(deleteid) {
 	}
 }
 
-
-
-
-
-
-/*function validateRecords() {
-	var flag = false;
-	var name = document.getElementById('uname').value;
+//validating the input values
+function validate(){
+	//var form = document.getElementById('form');
+ 	var flag = false;
+ 	var name = document.getElementById('uname').value;
 	var email = document.getElementById('uemail').value;
 	var atpos = email.indexOf("@");
     var dotpos = email.lastIndexOf(".");
@@ -113,6 +109,7 @@ function deleteUser(deleteid) {
 	var submit = document.getElementById('btnSubmit');
 	var nameErr = emailErr = phoneErr = titleErr = createdErr = '';
 
+
 	if (submit) {
 		if (name != "") {
 			if (email != "" && !(atpos < 1 || ( dotpos - atpos < 2 ))) {
@@ -120,7 +117,7 @@ function deleteUser(deleteid) {
 					if (title != "") {
 						if (created != "") {
 							flag = true;
-							//addRecords();
+							addRecords();
 						} else {
 							createdErr = "This field is required";
 							document.getElementById('createdErr').textContent = createdErr;
@@ -144,4 +141,10 @@ function deleteUser(deleteid) {
 							document.getElementById('nameErr').textContent = nameErr;
 		}
 	}
-}*/
+
+	return flag;
+}
+
+
+	
+		

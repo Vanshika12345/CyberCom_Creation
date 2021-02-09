@@ -30,6 +30,7 @@
                             </div>
                             <!--Modal body-->
                             <div class="modal-body">
+                                <form role="form" id="form">
                                 <div class="form-group">
                                     <label>Name</label>
                                     <input type="text" name="uname" id="uname" class="form-control" placeholder="Enter Name">
@@ -55,10 +56,11 @@
                                     <input type="text" name="ucreatedat" id="ucreatedat" class="form-control" >
                                     <div id='createdErr'class="text-danger"></div>
                                 </div>
+                            </form>    
                         </div>
                         <!--Modal footer-->
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" data-dismiss="modal" id="btnSubmit" onclick="addRecords()">Save</button> 
+                            <button type="button" class="btn btn-success" data-dismiss="modal" id="btnSubmit" onclick="return validate()">Save</button> 
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -123,6 +125,6 @@
  
         </section>
 
-	<script type="text/javascript" src="js/contactFormvalidations.js"></script>
+	<script type="text/javascript" src="js/contactFormvalidationsAndjQuery.js"></script>
 </body>
 </html>
