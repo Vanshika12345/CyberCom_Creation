@@ -3,9 +3,8 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  
-   <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">      
-</head>
+   <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
   <a class="navbar-brand pl-5 text-white" href="#">Web App</a>
@@ -27,10 +26,9 @@
 <script src="https://kit.fontawesome.com/4b3eb0abd5.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script></head>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/jquery.datetimepicker.full.js"></script>
 
 </body>
 </html>

@@ -1,11 +1,9 @@
 $(document).ready(function() {
-	$('#ucreatedat').datetimepicker();
-	$('#upd_ucreatedat').datetimepicker();
 	readRecords(); 
 	
 });
 
-//fetching the records
+
 function readRecords() {
 	var records = 'records';
 	$.ajax({
@@ -13,12 +11,12 @@ function readRecords() {
 		type: 'post',
 		data: {records:records},
 		success: function (data) {
-			$('#dataTable').html(data);
+			$('#datatable').html(data);
 		}
 	});
 }
 
-
+/*
 //inserting records
 function addRecords() {
 	var name = $('#uname').val();
@@ -26,6 +24,7 @@ function addRecords() {
 	var phone = $('#uphone').val();
 	var title = $('#utitle').val();
 	var createAt = $('#ucreatedat').val(); 
+
 	$.ajax({
 		url:'lib/connection.php',
 		type: 'post',
@@ -38,7 +37,7 @@ function addRecords() {
 }
 
 
-//fetching data of specific contact_id
+//edit function call
             function getUserDetails(id){
                 
                 $('#hidden_user_id').val(id);
@@ -55,7 +54,7 @@ function addRecords() {
                 }); 
                 $('#updateModal').modal('show');
             }
- //Updating to database
+ //           function to update user values
             function updateUserDetails(){
                 var hidden_user_id = $('#hidden_user_id').val();
                 var nameupd = $('#upd_uname').val();
@@ -76,9 +75,9 @@ function addRecords() {
                     $('#updateModal').modal('hide');
                     readRecords();
                 });}
+*/
 
 
-//deleting User
 function deleteUser(deleteid) {
 	console.log('Delete');
 	var conf = confirm('Are you sure?');
@@ -95,11 +94,12 @@ function deleteUser(deleteid) {
 	}
 }
 
-//validating the input values
-function validate(){
-	//var form = document.getElementById('form');
- 	var flag = false;
- 	var name = document.getElementById('uname').value;
+
+
+
+function validateRecords() {
+	var flag = false;
+	var name = document.getElementById('uname').value;
 	var email = document.getElementById('uemail').value;
 	var atpos = email.indexOf("@");
     var dotpos = email.lastIndexOf(".");
@@ -107,44 +107,37 @@ function validate(){
 	var title = document.getElementById('utitle').value;
 	var created= document.getElementById('ucreatedat').value;
 	var submit = document.getElementById('btnSubmit');
+	//var update = document.getElementById('btnUpdate');
 	var nameErr = emailErr = phoneErr = titleErr = createdErr = '';
-
-
 	if (submit) {
 		if (name != "") {
 			if (email != "" && !(atpos < 1 || ( dotpos - atpos < 2 ))) {
-				if (phone != "" && !isNaN(phone) && !phone.length >10) {
+				if (phone != "" && (phone.length == 10) && !isNaN(phone)) {
 					if (title != "") {
 						if (created != "") {
 							flag = true;
-							addRecords();
 						} else {
-							createdErr = "This field is required";
+							createdErr = "Please choose a date";
 							document.getElementById('createdErr').textContent = createdErr;
 						}
 					} else {
 
-							titleErr = "This field is required";
+							titleErr = "Please enter your title";
 							document.getElementById('titleErr').textContent = titleErr;
 					}
+				 
 				} else {
-
-							phoneErr = "This field is required and it shoud not be more than 10";
-							document.getElementById('phoneErr').textContent = phoneErr;
+					phoneErr = "Enter your phone number";
+					document.getElementById('phoneErr').textContent = phoneErr;
 				}
 			} else {
-				emailErr = "Enter a valid email";
+				emailErr = "Please enter valid email";
 							document.getElementById('emailErr').textContent = emailErr;
 			}
 		} else {
-			nameErr = "This field is required";
+			nameErr = "Please Enter your name";
 							document.getElementById('nameErr').textContent = nameErr;
 		}
 	}
-
 	return flag;
 }
-
-
-	
-		
