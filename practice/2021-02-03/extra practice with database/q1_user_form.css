@@ -1,0 +1,13 @@
+td{
+	width: 50%;
+	padding: 7px;
+	background-color: #80f0ff;
+}
+.error{
+		color: #FF0000;
+}
+.bgcolor{
+	text-align: center;
+	background-color:#fff385;
+	color: #FF0000; 
+}

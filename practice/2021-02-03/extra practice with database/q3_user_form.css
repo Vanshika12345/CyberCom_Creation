@@ -1,0 +1,31 @@
+.header{
+	text-align: left;
+	color: #ffff00; 
+	background-color: #ffb405;
+}
+table{
+	text-indent: 10px;
+	width: 350px;
+	height: 400px;
+	border-collapse: collapse;
+}
+td{
+	margin-top: 4px;
+	background-color: #00244d;
+	color: #ffff00;
+}
+.footer{
+	text-align: right;
+	background-color: #ffb405;
+}
+.error{
+	color: #FF0000;
+}
+.btn-submit{
+	color: #ffffff;
+	background-color: #26bf00;
+}
+.btn-cancel{
+	color: #ffffff;
+	background-color: #f20065;
+}
